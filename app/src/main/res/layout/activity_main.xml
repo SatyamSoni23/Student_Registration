@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/rect">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.25">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/iiitkimage"></ImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.5"
+            android:background="@drawable/student">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.22"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"/>
+            <Button
+                android:id="@+id/cont"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.9"
+                android:background="@drawable/anibutton"
+                android:stateListAnimator="@animator/button_state_list_anim"
+                android:gravity="center"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="CONTINUE"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:textStyle="bold|italic" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

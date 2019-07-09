@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "167102413711",
+    "firebase_url": "https://iiitkota-5e459.firebaseio.com",
+    "project_id": "iiitkota-5e459",
+    "storage_bucket": "iiitkota-5e459.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167102413711:android:115313376f0154af",
+        "android_client_info": {
+          "package_name": "com.example.iiitkota"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167102413711-uchjnun8kav058coi8f5univu7uevcft.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.iiitkota",
+            "certificate_hash": "87232138418886e73f91b9f6cfb0c87b0f7de1f7"
+          }
+        },
+        {
+          "client_id": "167102413711-7nga8t8h265tn61t16gg1qnnq3j1mp2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5PRQwfL0miajODXhSSL1C6zVmX6o5aa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167102413711-7nga8t8h265tn61t16gg1qnnq3j1mp2c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
