@@ -25,6 +25,11 @@ public class signupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setLogo(R.drawable.iiitkimage);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
         login = (Button) findViewById(R.id.login);
         name = (EditText) findViewById(R.id.name);
         password = (EditText)findViewById(R.id.password);
