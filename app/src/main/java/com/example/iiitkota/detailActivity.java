@@ -1,6 +1,7 @@
 package com.example.iiitkota;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.view.View;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,6 +34,7 @@ public class detailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+//--------------------------------------********-------Navbar--------**********---------------------------------
         dl = (DrawerLayout) findViewById(R.id.dl);
         abdt = new ActionBarDrawerToggle(this,dl,R.string.Open,R.string.Close);
         abdt.setDrawerIndicatorEnabled(true);
@@ -47,25 +50,38 @@ public class detailActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                if(id == R.id.myprofile){
-                    Toast.makeText(detailActivity.this, "MyProfile", Toast.LENGTH_SHORT).show();
+                if(id == R.id.students){
+                    Toast.makeText(detailActivity.this, "Students", Toast.LENGTH_SHORT).show();
+                    buttononClickStudents();
                 }
-                else if(id == R.id.settings){
-                    Toast.makeText(detailActivity.this, "settings", Toast.LENGTH_SHORT).show();
+                else if(id == R.id.aboutiiitkota){
+                    Toast.makeText(detailActivity.this, "About IIITKota", Toast.LENGTH_SHORT).show();
+                    buttonClickAboutiiitkota();
                 }
                 else if(id == R.id.editprofile){
-                    Toast.makeText(detailActivity.this, "EditProfile", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(detailActivity.this, "Edit Profile", Toast.LENGTH_SHORT).show();
                 }
                 return false;
             }
-        });
+            private void buttononClickStudents(){
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.iiitkota.ac.in/btech_students"));
+                startActivity(browserIntent);
+            }
 
+            private void buttonClickAboutiiitkota(){
+                Intent browserIntent= new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.iiitkota.ac.in/aboutus"));
+                startActivity(browserIntent);
+            }
+        });
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setLogo(R.drawable.iiitkimage);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
+//---------------------------------------******************************************-------------------------------------------
+
+//------------------------------------------**********---------Database----------************--------------------------------
         name = findViewById(R.id.name);
         password = findViewById(R.id.password);
         email = findViewById(R.id.email);
@@ -98,13 +114,16 @@ public class detailActivity extends AppCompatActivity {
 
             }
         });
+//----------------------------------------****************************************------------------------------------
 
+//----------------------------*************-----------Back_Button_Click-----------************-------------------------
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openbackActivity();
             }
         });
+//------------------------------------------------------------------------------------------------------------------------
     }
     public void openbackActivity(){
         Intent intent = new Intent(this, loginActivity.class);
@@ -115,5 +134,4 @@ public class detailActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
-
 }
