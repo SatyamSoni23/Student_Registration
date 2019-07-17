@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">IIITKOTA</string>
+    <string name="Open">IIITKOTA</string>
+    <string name="Close">IIITKOTA</string>
 </resources>

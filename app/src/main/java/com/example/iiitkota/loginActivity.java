@@ -29,6 +29,11 @@ public class loginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setLogo(R.drawable.iiitkimage);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
         name = findViewById(R.id.name);
         password = findViewById(R.id.password);
         login = findViewById(R.id.login);
